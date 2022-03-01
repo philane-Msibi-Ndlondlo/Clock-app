@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../assets/desktop/bg-image-daytime.jpg);
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body.nightTime {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../assets/desktop/bg-image-nighttime.jpg);
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hide__timezone__more {
+  display: none;
+}
+
+.banner {
+  min-height: 100vh;
+  padding: 4em 10em;
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+}
+@media screen and (max-width: 900px) {
+  .banner {
+    padding: 2em 4em;
+  }
+}
+.banner .quote__container {
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 30%;
+}
+.banner .quote__container .quote {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+.banner .quote__container .author {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+.banner .timezone__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .banner .timezone__container {
+    flex-direction: column;
+  }
+}
+.banner .timezone__container .timezone_left {
+  display: flex;
+  flex-direction: column;
+}
+.banner .timezone__container .timezone_left .welcome {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+@media screen and (max-width: 660px) {
+  .banner .timezone__container .timezone_left .welcome {
+    font-size: 15px;
+  }
+}
+.banner .timezone__container .timezone_left .welcome .welcome_icon {
+  display: inline-block;
+  margin-right: 8px;
+}
+.banner .timezone__container .timezone_left .time {
+  font-size: 200px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+@media screen and (max-width: 1200px) {
+  .banner .timezone__container .timezone_left .time {
+    font-size: 175px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .banner .timezone__container .timezone_left .time {
+    font-size: 100px;
+  }
+}
+.banner .timezone__container .timezone_left .time .timezone__unit {
+  font-size: 40px;
+}
+@media screen and (max-width: 660px) {
+  .banner .timezone__container .timezone_left .time .timezone__unit {
+    font-size: 18px;
+  }
+}
+.banner .timezone__container .timezone_left .city {
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.banner .timezone__container .timezone_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+@media screen and (max-width: 1200px) {
+  .banner .timezone__container .timezone_right {
+    margin-top: 3em;
+  }
+}
+.banner .timezone__container .timezone_right .moreBtn {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .banner .timezone__container .timezone_right .moreBtn {
+    width: 200px;
+  }
+}
+.banner .timezone__container .timezone_right .moreBtn #moreBtnIcon {
+  background-color: #303030;
+  width: 40px;
+  height: 40px;
+  padding: 12px 8px;
+  border-radius: 50%;
+  margin-left: 16px;
+}
+
+.timezone__more {
+  display: flex;
+  flex: 1;
+  transition: 0.5s all;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #979797;
+  padding: 5em 10em;
+}
+.timezone__more.hide__timezone__more {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .timezone__more {
+    padding: 2em 4em;
+    flex-direction: column;
+  }
+}
+.timezone__more .left, .timezone__more .right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.timezone__more .left .top, .timezone__more .left .bottom, .timezone__more .right .top, .timezone__more .right .bottom {
+  margin-bottom: 3em;
+}
+@media screen and (max-width: 1200px) {
+  .timezone__more .left .top, .timezone__more .left .bottom, .timezone__more .right .top, .timezone__more .right .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.timezone__more .left .top .title, .timezone__more .left .bottom .title, .timezone__more .right .top .title, .timezone__more .right .bottom .title {
+  color: #303030;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.timezone__more .left .top .timezone, .timezone__more .left .bottom .timezone, .timezone__more .right .top .timezone, .timezone__more .right .bottom .timezone {
+  color: #303030;
+  font-size: 56px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media screen and (max-width: 1200px) {
+  .timezone__more .left .top .timezone, .timezone__more .left .bottom .timezone, .timezone__more .right .top .timezone, .timezone__more .right .bottom .timezone {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .timezone__more .left .top .timezone, .timezone__more .left .bottom .timezone, .timezone__more .right .top .timezone, .timezone__more .right .bottom .timezone {
+    font-size: 20px;
+  }
+}
+.timezone__more .right {
+  margin-left: 3em;
+}
+@media screen and (max-width: 1200px) {
+  .timezone__more .right {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

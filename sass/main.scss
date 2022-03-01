@@ -1,0 +1,209 @@
+@use "partials/colors" as Colors;
+@use "partials/reset" as reset;
+@use "partials/base" as base;
+@use "partials/helpers" as helpers;
+@use "partials/breakpoints" as breakpoints;
+
+.banner {
+    min-height: 100vh;
+    padding: 4em 10em;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+
+    @media screen and (max-width: breakpoints.$mobile) {
+        padding: 2em 4em;
+    }
+
+    .quote__container {
+        width: 100%;
+        flex: 1;
+        flex-direction: column;
+        margin-bottom: 30%;
+    
+        .quote {
+            color: Colors.$white; // Must add to var
+            font-size: 18px; // Add to var
+            margin-bottom: 1em;
+        }
+    
+        .author {
+            color: Colors.$white;;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+    
+    .timezone__container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @media screen and (max-width: breakpoints.$lg_laptops) {
+                flex-direction: column;
+        }
+    
+        .timezone_left {
+            display: flex;
+            flex-direction: column;
+    
+            .welcome {
+                color: Colors.$white;;
+                font-size: 20px;
+                text-transform: uppercase;
+                display: inline-block;
+
+                @media screen and (max-width: breakpoints.$xs_mobile) {
+                    font-size: 15px;
+                }
+    
+                .welcome_icon {
+                    display: inline-block;
+                    margin-right: 8px;
+                }
+            }
+    
+            .time {
+                font-size: 200px;
+                color: Colors.$white;;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin: 0;
+
+                @media screen and (max-width: breakpoints.$lg_laptops) {
+                    font-size: 175px;
+                }
+
+                @media screen and (max-width: breakpoints.$xs_mobile) {
+                    font-size: 100px;
+                }
+
+                .timezone__unit {
+                    font-size: 40px;
+
+                    @media screen and (max-width: breakpoints.$xs_mobile) {
+                        font-size: 18px;
+                    }
+                }
+            }
+    
+            .city {
+                color: Colors.$white;;
+                font-size: 24px;
+                text-transform: uppercase;
+            }
+        }
+    
+        .timezone_right {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+            @media screen and (max-width: breakpoints.$lg_laptops) {
+                margin-top: 3em;;
+        }
+
+            .moreBtn {
+                background-color: Colors.$white;;
+                color: Colors.$black;;
+                text-decoration: none;
+                font-weight: bold;
+                letter-spacing: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 40px;
+                text-align: center;
+                font-size: 16px;
+                text-transform: uppercase;
+                border-radius: 40px;
+
+                @media screen and (max-width: breakpoints.$lg_laptops) {
+                    width: 200px;
+                }
+
+                #moreBtnIcon {
+                    background-color: Colors.$primary;;
+                    width: 40px;
+                    height: 40px;
+                    padding: 12px 8px;
+                    border-radius: 50%;
+                    margin-left: 16px;
+                }
+
+            }
+        }
+    }
+}
+
+.timezone__more {
+
+    &.hide__timezone__more {
+        display: none;
+    }
+
+    display: flex;
+    flex: 1;
+    transition: .5s all;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #979797;
+    padding: 5em 10em;
+
+    @media screen and (max-width: breakpoints.$s_laptops) {
+        padding: 2em 4em;
+        flex-direction: column;
+    }
+    
+    .left, .right {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        
+    }
+
+    .left, .right {
+        
+        .top, .bottom {
+            margin-bottom: 3em;
+
+            @media screen and (max-width: breakpoints.$s_laptops) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+
+            .title {
+                color: Colors.$primary;;
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+
+            .timezone {
+                color: Colors.$primary;;
+                font-size: 56px;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                @media screen and (max-width: breakpoints.$s_laptops) {
+                    font-size: 30px;
+                }
+
+                @media screen and (max-width: breakpoints.$xs_mobile) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .right {
+        margin-left: 3em;
+
+        @media screen and (max-width: breakpoints.$s_laptops) {
+            margin-left: 0;
+        }
+    }
+}

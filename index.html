@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <title>Frontend Mentor | Clock App</title>
+</head>
+<body>
+  <div class="banner">
+  <div class="quote__container">
+    <p class="quote" id="quote">
+      Loading...
+    </p>
+    <p class="author" id="author">Loading...</p>
+  </div>
+  <div class="timezone__container">
+    <div class="timezone_left">
+      <p class="welcome">
+        <img src="assets/desktop/icon-sun.svg" alt="" class="welcome_icon" id="welcome_icon">
+        <span id="greeting"></span>
+      </p>
+      <p class="time""><span id="time"></span><span class="timezone__unit" id="timezone__unit">Loading...</span> </p>
+      <p class="city" id="city">Loading...</p>
+    </div>
+    <div class="timezone_right">
+      <a href="" class="moreBtn" id="moreBtn">
+        <span id="moreBtnText">More</span>
+        <img src="assets/desktop/icon-arrow-down.svg" alt="" id="moreBtnIcon">
+      </a>
+    </div>
+  </div>
+</div>
+  <div class="timezone__more hide__timezone__more" id="timezone__more">
+    <div class="left">
+      <div class="top">
+        <span class="title">CURRENT TIMEZONE</span>
+        <p class="timezone" id="timezone">Loading...</p>
+      </div>
+      <div class="bottom">
+        <span class="title">Day of the year</span>
+        <p class="timezone" id="dayOfYear">Loading...</p>
+      </div>
+    </div>
+    <div class="right">
+      <div class="top">
+        <span class="title">Day of the week</span>
+        <p class="timezone" id="dayOfWeek">Loading...</p>
+      </div>
+      <div class="bottom">
+        <span class="title">Week number</span>
+        <p class="timezone" id="weekNumber">Loading...</p>
+      </div>
+    </div>
+  </div>
+  <script src="./js/main.js" type="module" defer=""></script>
+</body>
+</html>
